@@ -3,13 +3,13 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - '**.md'
       - 'img/**'
   pull_request:
     branches:
-      - master
+      - main
     paths-ignore:
       - '**.md'
       - 'img/**'
@@ -76,7 +76,6 @@ jobs:
           ./app/build/outputs/apk/debug/termux-x11-*-all.deb
           ./app/build/outputs/apk/debug/termux-x11-*-any.pkg.tar.xz
 
-    # 👇 O NOSSO PASSO MÁGICO PARA PEGAR O .AAR 👇
     - name: Upload AAR Artifact
       uses: actions/upload-artifact@v4
       with:
