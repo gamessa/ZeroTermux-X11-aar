@@ -24,6 +24,9 @@ jobs:
       with:
         submodules: recursive
         fetch-depth: 1
+
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
         
     - name: Validation
       uses: gradle/actions/wrapper-validation@v4
